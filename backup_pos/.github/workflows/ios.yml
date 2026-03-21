@@ -1,0 +1,45 @@
+name: iOS Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch: # Allows you to manually click a "Run workflow" button in GitHub
+
+jobs:
+  build_ios:
+    runs-on: macos-latest # This boots up a free Apple Mac in the cloud 🍎
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build iOS (No Codesign)
+        # To strictly build a signed .ipa you need an Apple Developer Account 
+        # ($99/yr) and complicated certificate injections.
+        # This builds an unsigned release instead.
+        run: flutter build ios --release --no-codesign
+
+      - name: Package Payload to Unsigned IPA
+        # This takes the unsigned .app file and packs it into an .ipa file format
+        run: |
+          mkdir Payload
+          cp -r build/ios/iphoneos/Runner.app Payload/
+          zip -r app-release-unsigned.ipa Payload
+
+      - name: Upload iOS File
+        uses: actions/upload-artifact@v4
+        with:
+          name: IOS-Unsigned-Release
+          path: app-release-unsigned.ipa
+          retention-days: 7

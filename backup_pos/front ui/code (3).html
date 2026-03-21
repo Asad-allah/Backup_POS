@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sheikh Al Jabal - History Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee79",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102217",
+                        "card-dark": "#193324",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white h-screen flex flex-col overflow-hidden selection:bg-primary selection:text-background-dark">
+<!-- Top App Bar -->
+<header class="shrink-0 flex items-center justify-between p-5 pb-2 bg-background-light dark:bg-background-dark z-20">
+<h1 class="text-2xl font-bold tracking-tight leading-tight">Transaction History</h1>
+<button class="group flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-[#1f382b] hover:bg-primary hover:text-background-dark transition-all duration-300 shadow-sm border border-slate-200 dark:border-white/5">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">search</span>
+</button>
+</header>
+<!-- Filter Bar -->
+<div class="shrink-0 w-full pl-5 pr-0 py-2">
+<div class="flex gap-3 overflow-x-auto no-scrollbar items-center pb-2 pr-5">
+<!-- Date Range Filter -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-[#1f382b] border border-slate-200 dark:border-white/10 pl-3 pr-4 h-9 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="text-xs font-bold tracking-wide">Date Range</span>
+<span class="material-symbols-outlined text-[18px] opacity-50">arrow_drop_down</span>
+</button>
+<!-- Amount Filter -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-[#1f382b] border border-slate-200 dark:border-white/10 pl-3 pr-4 h-9 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px] text-primary">attach_money</span>
+<span class="text-xs font-bold tracking-wide">Amount</span>
+<span class="material-symbols-outlined text-[18px] opacity-50">arrow_drop_down</span>
+</button>
+<!-- Cashier Filter -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-[#1f382b] border border-slate-200 dark:border-white/10 pl-3 pr-4 h-9 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+<span class="text-xs font-bold tracking-wide">Cashier</span>
+<span class="material-symbols-outlined text-[18px] opacity-50">arrow_drop_down</span>
+</button>
+<div class="w-px h-6 bg-slate-300 dark:bg-white/20 mx-1 shrink-0"></div>
+<!-- Export Button -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-background-dark px-4 h-9 shadow-[0_0_15px_rgba(43,238,121,0.2)] active:scale-95 transition-transform hover:shadow-[0_0_20px_rgba(43,238,121,0.4)]">
+<span class="material-symbols-outlined text-[18px]">file_upload</span>
+<span class="text-xs font-bold uppercase tracking-wide">Export All</span>
+</button>
+</div>
+</div>
+<!-- Transaction List -->
+<main class="flex-1 overflow-y-auto p-5 pt-2 pb-32 space-y-5">
+<!-- Section Header -->
+<div class="flex items-center gap-4 py-1 opacity-60">
+<span class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-500 dark:text-slate-400">Today, Oct 24</span>
+<div class="h-px bg-slate-200 dark:bg-white/10 flex-1"></div>
+</div>
+<!-- Card 1: Synced Success -->
+<article class="relative w-full rounded-xl bg-white dark:bg-card-dark shadow-lg shadow-black/20 border-l-[6px] border-primary overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="p-5 pb-3">
+<div class="flex justify-between items-start mb-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#112319] text-primary border border-primary/20 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide flex items-center gap-1.5 shadow-inner">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 
+                                Synced
+                            </span>
+<span class="text-xs text-slate-400 font-mono tracking-tight opacity-70">#TRX-88291</span>
+</div>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">$142.50</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-[#92c9a8] flex items-center gap-1">
+                            10:42 AM <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> 12 Items <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> Credit Card
+                        </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-white/5 w-full mx-auto"></div>
+<div class="flex items-center justify-around py-1">
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">receipt_long</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">View Receipt</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">share</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Share</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">print</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Reprint</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Synced Success -->
+<article class="relative w-full rounded-xl bg-white dark:bg-card-dark shadow-lg shadow-black/20 border-l-[6px] border-primary overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="p-5 pb-3">
+<div class="flex justify-between items-start mb-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#112319] text-primary border border-primary/20 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide flex items-center gap-1.5 shadow-inner">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 
+                                Synced
+                            </span>
+<span class="text-xs text-slate-400 font-mono tracking-tight opacity-70">#TRX-88290</span>
+</div>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">$89.20</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-[#92c9a8] flex items-center gap-1">
+                            09:15 AM <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> 5 Items <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> Cash
+                        </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-white/5 w-full mx-auto"></div>
+<div class="flex items-center justify-around py-1">
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">receipt_long</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">View Receipt</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">share</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Share</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">print</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Reprint</span>
+</button>
+</div>
+</article>
+<!-- Section Header -->
+<div class="flex items-center gap-4 py-1 opacity-60 pt-2">
+<span class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-500 dark:text-slate-400">Yesterday, Oct 23</span>
+<div class="h-px bg-slate-200 dark:bg-white/10 flex-1"></div>
+</div>
+<!-- Card 3: Synced Success -->
+<article class="relative w-full rounded-xl bg-white dark:bg-card-dark shadow-lg shadow-black/20 border-l-[6px] border-primary overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1 opacity-90">
+<div class="p-5 pb-3">
+<div class="flex justify-between items-start mb-2">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-[#112319] text-primary border border-primary/20 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide flex items-center gap-1.5 shadow-inner">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 
+                                Synced
+                            </span>
+<span class="text-xs text-slate-400 font-mono tracking-tight opacity-70">#TRX-88200</span>
+</div>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">$312.00</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-[#92c9a8] flex items-center gap-1">
+                            08:45 PM <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> 24 Items <span class="w-1 h-1 rounded-full bg-current opacity-50"></span> Credit Card
+                        </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-white/5 w-full mx-auto"></div>
+<div class="flex items-center justify-around py-1">
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">receipt_long</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">View Receipt</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">share</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Share</span>
+</button>
+<div class="w-px h-6 bg-slate-100 dark:bg-white/5"></div>
+<button class="flex flex-1 items-center justify-center gap-2 py-3 hover:bg-white/5 transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-primary transition-colors">print</span>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-300 group-hover:text-white">Reprint</span>
+</button>
+</div>
+</article>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/90 dark:bg-[#0c1a11]/90 backdrop-blur-md border-t border-slate-200 dark:border-white/5 pb-6 pt-3 px-6 z-50 shadow-[0_-5px_20px_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-end max-w-sm mx-auto">
+<!-- New Sale -->
+<button class="flex flex-1 flex-col items-center gap-1.5 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors group">
+<div class="h-8 w-12 rounded-full flex items-center justify-center group-hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[26px]">point_of_sale</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">New Sale</span>
+</button>
+<!-- History (Active) -->
+<button class="flex flex-1 flex-col items-center gap-1.5 text-primary">
+<div class="bg-[#1e3a29] h-8 w-14 rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(43,238,121,0.15)]">
+<span class="material-symbols-outlined text-[24px]">history</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">History</span>
+</button>
+<!-- Pending -->
+<button class="flex flex-1 flex-col items-center gap-1.5 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors group relative">
+<div class="h-8 w-12 rounded-full flex items-center justify-center group-hover:bg-white/5 transition-colors">
+<div class="relative">
+<span class="material-symbols-outlined text-[26px]">pending_actions</span>
+<span class="absolute -top-1.5 -right-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-primary text-[9px] font-extrabold text-background-dark px-1 shadow-sm">3</span>
+</div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Pending</span>
+</button>
+</div>
+</nav>
+</body></html>

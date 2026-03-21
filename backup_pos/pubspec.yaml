@@ -1,0 +1,70 @@
+name: backup_pos
+description: "Offline Backup POS System - Process sales offline, generate receipts, re-enter via barcodes"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  
+  # Database
+  sqflite: ^2.3.0
+  path_provider: ^2.1.0
+  path: ^1.8.0
+  
+  # CSV Parsing
+  csv: ^6.0.0
+  file_picker: ^8.0.0
+  
+  # Barcode
+  mobile_scanner: ^5.0.0
+  barcode_widget: ^2.0.4
+  
+  # PDF
+  pdf: ^3.10.0
+  printing: ^5.12.0
+  
+  # State Management
+  provider: ^6.1.0
+  
+  # Utilities
+  intl: ^0.19.0
+  flutter_animate: ^4.5.2
+  google_fonts: ^6.3.3
+  shared_preferences: ^2.2.0
+  fl_chart: ^0.65.0
+  flutter_ringtone_player: ^4.0.0+4
+
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_svg: ^2.2.3
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.6
+  sqflite_common_ffi: ^2.4.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.svg"
+
+flutter_native_splash:
+  color: "#121212"
+  image: "assets/logo.svg"
+  fullscreen: true
+  android_12:
+    image: "assets/logo.svg"
+    color: "#121212"

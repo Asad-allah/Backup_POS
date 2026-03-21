@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sheikh Al Jabal - POS</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&amp;family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2bee79",
+              "background-light": "#f6f8f7",
+              "background-dark": "#102217",
+              "surface-dark": "#1c3326", // Slightly lighter forest green for cards
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-hidden select-none">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header Zone -->
+<div class="flex-none z-20 flex flex-col bg-background-light dark:bg-background-dark pb-2 shadow-sm border-b border-white/5">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between px-4 py-3">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-white/10 active:scale-95 transition">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<div class="flex flex-col items-center">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Sheikh Al Jabal</h2>
+<span class="text-xs text-primary/80 font-medium tracking-wide">شيخ الجبل</span>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-white/10 active:scale-95 transition">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+<!-- Main Actions Area -->
+<div class="px-4 pb-2 space-y-3">
+<!-- Scan Button -->
+<button class="relative w-full overflow-hidden rounded-full bg-primary h-14 flex items-center justify-center gap-3 text-background-dark shadow-[0_0_20px_rgba(43,238,121,0.3)] hover:brightness-110 active:scale-[0.99] transition-all group">
+<span class="material-symbols-outlined text-[28px]">qr_code_scanner</span>
+<span class="text-lg font-bold tracking-tight">Tap to Scan Barcode</span>
+<div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
+</button>
+<!-- Search Bar -->
+<label class="flex items-center h-12 w-full bg-surface-dark/50 rounded-xl px-4 gap-3 focus-within:ring-1 focus-within:ring-primary/50 transition-all border border-transparent focus-within:border-primary/30">
+<span class="material-symbols-outlined text-[#92c9a8]">search</span>
+<input class="flex-1 bg-transparent border-none text-white placeholder:text-[#92c9a8] focus:ring-0 text-base font-normal leading-normal h-full p-0" placeholder="Search by name, SKU or brand..." type="text"/>
+<button class="text-[#92c9a8] hover:text-white">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</label>
+</div>
+</div>
+<!-- Scrollable Cart Section -->
+<div class="flex-1 overflow-y-auto no-scrollbar p-4 space-y-3">
+<!-- List Item 1 -->
+<div class="flex gap-4 bg-surface-dark/40 border border-white/5 rounded-2xl p-3 shadow-sm hover:border-primary/20 transition-colors">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-xl size-20 shadow-inner" data-alt="Close up of fresh creamy labneh in a bowl with mint" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr2cMxGkWoonlKAOyFj-TulcsMDAa7lkBK8DYHZTrBHCsNGrKhEQXnlP3B83iJ5iTf3_Wvjk9NyE_3qbd2CX7U0CBGA275wKrXEypOwW5mAFE2obK9sAQmteetujBONY1SoFJQNetd-bs3MP_Xhl0PqrcN58hO4ZMv28T2uza_-PlFKko-37bTh53u5dlRnS3O99b6LyVJYYnk44SW9sxjZAKLgS3iolZz2W5HcFt1iaA6LuO6mwzAHXniHtkZC_wR96zdIQO1sbE");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-white text-base font-bold leading-tight">Fresh Labneh <span class="text-sm font-normal text-gray-400 block mt-0.5">لبنة طازجة</span></h3>
+<span class="text-primary font-bold text-lg">30.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-blue-500/20 text-blue-200 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Dairy</span>
+<span class="text-[#92c9a8] text-xs">15.00 AED / unit</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3">
+<button class="text-red-400 hover:text-red-300 flex items-center gap-1 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">delete</span>
+                            Remove
+                        </button>
+<div class="flex items-center bg-[#112218] rounded-full p-1 border border-white/10">
+<button class="flex size-7 items-center justify-center rounded-full bg-surface-dark hover:bg-white/10 text-white transition cursor-pointer">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center text-sm font-bold">2</span>
+<button class="flex size-7 items-center justify-center rounded-full bg-primary text-[#112218] hover:brightness-110 transition cursor-pointer shadow-[0_0_10px_rgba(43,238,121,0.2)]">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex gap-4 bg-surface-dark/40 border border-white/5 rounded-2xl p-3 shadow-sm hover:border-primary/20 transition-colors">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-xl size-20 shadow-inner" data-alt="Rustic sourdough bread loaf on wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAKjpkiLhmeFzFR6iYst0W5gFt3vipNQ2QzGpWXCGtot7VV0J4R987BzjhlzJ2oZFJwSp2-0Kpn9AYfYxZ0CO8cajlvFHExIQctVJ735Vjeyse25o26NkmwBlJDBU0KQaiDhVLy95tPZBhNbzfMK-uY5YiMYat5TYKszs0wauPRENPzwdjxwO0aVJ7hjpvBABunFt3blzkg8BV6S9R1_bUFmPcndcvwSnwWXmp-a6cx_61_RgufRxJqDxWYnEfaap2IqYG8awdfXQ");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-white text-base font-bold leading-tight">Sourdough Bread <span class="text-sm font-normal text-gray-400 block mt-0.5">خبز العجين المخمر</span></h3>
+<span class="text-primary font-bold text-lg">12.50</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-amber-500/20 text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Bakery</span>
+<span class="text-[#92c9a8] text-xs">12.50 AED / unit</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3">
+<button class="text-red-400 hover:text-red-300 flex items-center gap-1 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">delete</span>
+                            Remove
+                        </button>
+<div class="flex items-center bg-[#112218] rounded-full p-1 border border-white/10">
+<button class="flex size-7 items-center justify-center rounded-full bg-surface-dark hover:bg-white/10 text-white transition cursor-pointer">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center text-sm font-bold">1</span>
+<button class="flex size-7 items-center justify-center rounded-full bg-primary text-[#112218] hover:brightness-110 transition cursor-pointer shadow-[0_0_10px_rgba(43,238,121,0.2)]">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex gap-4 bg-surface-dark/40 border border-white/5 rounded-2xl p-3 shadow-sm hover:border-primary/20 transition-colors">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-xl size-20 shadow-inner" data-alt="Fresh organic green apples piled up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwf49NxrdbTNpGgz8kplp93bGlYK4ekcxATOcTnjsAo6QwVqq5GfgfO59dEnQQbO_2IHLLjrzOLhFMfO3QOMILUP1DKSLeJL9w09psHQE0sEfKJRlXFlWWXZG_H03ptaUfjSju4DceQyoIS7Ic9x3HPkmv_ekjn8myHVneqaI6nbqU6z6K99HXLqLg-sew7z4uNYL2t9ef0cPiB14b5VT9FylR0XC6tVhwObAEjjQTcSmrt_6zJkOVr1_6SZwTrIQAGbQzd1MZe3Y");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-white text-base font-bold leading-tight">Organic Apples <span class="text-sm font-normal text-gray-400 block mt-0.5">تفاح عضوي</span></h3>
+<span class="text-primary font-bold text-lg">24.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-green-500/20 text-green-200 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Produce</span>
+<span class="text-[#92c9a8] text-xs">8.00 AED / kg</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3">
+<button class="text-red-400 hover:text-red-300 flex items-center gap-1 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">delete</span>
+                            Remove
+                        </button>
+<div class="flex items-center bg-[#112218] rounded-full p-1 border border-white/10">
+<button class="flex size-7 items-center justify-center rounded-full bg-surface-dark hover:bg-white/10 text-white transition cursor-pointer">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center text-sm font-bold">3</span>
+<button class="flex size-7 items-center justify-center rounded-full bg-primary text-[#112218] hover:brightness-110 transition cursor-pointer shadow-[0_0_10px_rgba(43,238,121,0.2)]">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="flex gap-4 bg-surface-dark/40 border border-white/5 rounded-2xl p-3 shadow-sm hover:border-primary/20 transition-colors opacity-60 grayscale-[50%]">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-xl size-20 shadow-inner" data-alt="Bottles of olive oil on shelf" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtgk7UiDY3JIJHilNhIqNXhbz1Vc9b9RiuT-ZkA1ZabmgavMd8ZLMOi3E4unNwEpom-rB0DB3Pzlnoj32CqTJOUp_cAYu_0vLQREWMkcpO7y0BNF2gl9r7U9_gz3aeHO-30GDaSOtSBc-S91f9GvExZwBQAIjFmVtYXrRzgS7ViAN--wv4FHwSjzrQrIxGzFYfoMRcpHAKN0E2uxM9VqUIAE5ZR1nigafvJ5N6VlfqTc2qUsBx8rP9Lj5fue5T3huwJHOqZHnPc0s");'></div>
+</div>
+<div class="flex flex-1 flex-col justify-between py-0.5">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-white text-base font-bold leading-tight">Olive Oil 500ml <span class="text-sm font-normal text-gray-400 block mt-0.5">زيت زيتون</span></h3>
+<span class="text-primary font-bold text-lg">45.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-purple-500/20 text-purple-200 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Pantry</span>
+</div>
+</div>
+<div class="flex items-center justify-end mt-3 h-9">
+<span class="text-xs text-red-300 font-medium bg-red-900/20 px-2 py-1 rounded">Out of Stock</span>
+</div>
+</div>
+</div>
+<!-- Spacer for visual bottom breathing room -->
+<div class="h-4"></div>
+</div>
+<!-- Sticky Footer Zone -->
+<div class="flex-none bg-background-light dark:bg-background-dark border-t border-white/5 p-4 shadow-[0_-5px_20px_rgba(0,0,0,0.4)] z-20">
+<!-- Summary Row -->
+<div class="flex items-end justify-between mb-4 px-1">
+<div class="flex flex-col">
+<span class="text-[#92c9a8] text-sm font-medium mb-1">Items Count</span>
+<span class="text-white text-2xl font-bold leading-none">6 <span class="text-base font-normal text-white/50">units</span></span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[#92c9a8] text-sm font-medium mb-1">Total Amount</span>
+<span class="text-primary text-3xl font-bold leading-none tracking-tight">111.50 <span class="text-lg">AED</span></span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex gap-3 h-14">
+<button class="flex-[0.3] flex items-center justify-center rounded-full border border-white/20 text-white font-bold text-base hover:bg-white/5 active:scale-95 transition">
+                    Clear
+                </button>
+<button class="flex-1 flex items-center justify-center rounded-full bg-primary text-[#112218] gap-2 font-bold text-lg shadow-[0_0_20px_rgba(43,238,121,0.2)] hover:brightness-110 active:scale-95 transition">
+<span class="material-symbols-outlined filled">receipt_long</span>
+                    Generate Receipt
+                </button>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="flex-none bg-[#0e1f15] border-t border-white/5 pb-5 pt-2">
+<nav class="flex items-center justify-around w-full">
+<!-- Active Tab -->
+<button class="flex flex-col items-center gap-1 p-2 w-20 text-primary">
+<div class="bg-primary/20 px-5 py-1 rounded-full">
+<span class="material-symbols-outlined filled">point_of_sale</span>
+</div>
+<span class="text-xs font-bold">New Sale</span>
+</button>
+<!-- Pending Tab -->
+<button class="flex flex-col items-center gap-1 p-2 w-20 text-[#92c9a8] hover:text-white transition relative">
+<span class="material-symbols-outlined">pending_actions</span>
+<span class="text-xs font-medium">Pending</span>
+<span class="absolute top-1 right-3 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[#112218] text-[9px] font-bold border border-[#0e1f15]">5</span>
+</button>
+<!-- History Tab -->
+<button class="flex flex-col items-center gap-1 p-2 w-20 text-[#92c9a8] hover:text-white transition">
+<span class="material-symbols-outlined">history</span>
+<span class="text-xs font-medium">History</span>
+</button>
+</nav>
+</div>
+</div>
+</body></html>

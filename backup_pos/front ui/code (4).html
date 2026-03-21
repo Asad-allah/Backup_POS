@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sheikh Al Jabal - Re-entry Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee79",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102217",
+                        "surface-dark": "#192820",
+                        "surface-darker": "#0d1811",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "Noto Sans Arabic", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "2xl": "2.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white selection:bg-primary selection:text-background-dark">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<header class="flex items-center p-4 pt-6 pb-2 justify-between sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-mono">#TRX-9021</h2>
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">pause</span>
+</button>
+</header>
+<!-- Meta & Progress -->
+<div class="px-6 pt-2 pb-4 flex flex-col gap-4">
+<p class="text-slate-500 dark:text-[#92c9a8] text-sm font-medium leading-normal text-center uppercase tracking-wide">Re-entering to Main System</p>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<p class="text-slate-900 dark:text-white text-3xl font-bold leading-none">Item 3 <span class="text-base font-normal text-slate-500 dark:text-white/50">of 12</span></p>
+<p class="text-primary text-sm font-bold">25%</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-[#326747]/30 h-2 overflow-hidden">
+<div class="h-full rounded-full bg-primary shadow-[0_0_10px_rgba(43,238,121,0.5)] transition-all duration-500 ease-out" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<main class="flex-1 flex flex-col px-4 gap-4 pb-32 overflow-y-auto">
+<!-- Hero Barcode Card -->
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-b from-primary/20 to-transparent rounded-2xl blur opacity-30 transition duration-1000 group-hover:opacity-50"></div>
+<div class="relative flex flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-xl">
+<div class="w-full h-24 flex items-center justify-center overflow-hidden mb-4">
+<!-- Simulated Barcode using divs for cleaner look without external image dependency if possible, or simple bars -->
+<div class="flex items-stretch h-16 gap-[2px] w-full justify-center px-4 opacity-90">
+<div class="w-1 bg-black h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-3 bg-black h-full"></div>
+<div class="w-1 bg-black h-full"></div>
+<div class="w-2 bg-transparent h-full"></div>
+<div class="w-4 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-1 bg-black h-full"></div>
+<div class="w-3 bg-transparent h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-1 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-3 bg-black h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-4 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-1 bg-black h-full"></div>
+<div class="w-2 bg-black h-full"></div>
+<div class="w-1 bg-transparent h-full"></div>
+<div class="w-3 bg-black h-full"></div>
+</div>
+</div>
+<p class="text-slate-900 text-2xl font-mono font-bold tracking-widest mb-6">8392019920</p>
+<div class="flex items-center gap-3 w-full">
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+                            Copy
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-10 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                            Zoom
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Info Card -->
+<div class="rounded-2xl bg-surface-dark dark:bg-surface-dark p-1 border border-white/5">
+<div class="flex gap-4 p-4 items-start">
+<div class="size-16 rounded-xl bg-white/10 shrink-0 overflow-hidden bg-center bg-cover" data-alt="Bottle of organic olive oil with green label" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5yk3rfJm_lXfGHBoS3_mKekIYyAvJHlPaq51YcEbOm6NhJmzqDxxty3z71Py7pzTOaItmJbkIbkykST4yzlcJ250hagWQdqxbRN8qqrBrYHJRo1GtuqOXGLlc23mUMfEnlDVic7jAOCbRwoyu971jyUeM8miNopSgREwoScqUrlVc5ABosJPkoNvA-WTaFNBBteezh8NR_Mo-lww792m070K_godyD8-hcskZ5O16A89fhf3-BwEuJTAd8NlYfiUi3hFy5EIaJm0");'></div>
+<div class="flex-1 min-w-0">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight mb-1 truncate">Organic Olive Oil</h3>
+<p class="text-slate-500 dark:text-[#92c9a8] text-sm font-normal font-[Noto_Sans_Arabic] text-right" dir="rtl">زيت زيتون عضوي</p>
+</div>
+</div>
+<div class="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10">
+<div class="p-3 text-center flex flex-col items-center justify-center">
+<span class="text-xs text-slate-500 dark:text-white/50 uppercase tracking-wider mb-1">Qty</span>
+<span class="text-slate-900 dark:text-white font-mono font-bold">1</span>
+</div>
+<div class="p-3 text-center flex flex-col items-center justify-center">
+<span class="text-xs text-slate-500 dark:text-white/50 uppercase tracking-wider mb-1">Unit</span>
+<span class="text-slate-900 dark:text-white font-mono font-bold">12.50</span>
+</div>
+<div class="p-3 text-center flex flex-col items-center justify-center bg-white/5">
+<span class="text-xs text-slate-500 dark:text-white/50 uppercase tracking-wider mb-1">Total</span>
+<span class="text-primary font-mono font-bold">12.50</span>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex items-center gap-3 pt-4">
+<button class="size-12 rounded-full flex items-center justify-center bg-surface-dark dark:bg-surface-dark text-white hover:bg-white/10 transition-colors border border-white/10 shrink-0">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="flex-1 h-12 rounded-full bg-primary text-background-dark font-bold text-base flex items-center justify-center gap-2 hover:bg-[#1fdc6b] active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(43,238,121,0.3)]">
+<span>Item Entered</span>
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<button class="size-12 rounded-full flex items-center justify-center bg-surface-dark dark:bg-surface-dark text-white hover:bg-white/10 transition-colors border border-white/10 shrink-0">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="text-center">
+<button class="text-xs text-slate-500 dark:text-white/40 hover:text-primary transition-colors py-2">Skip this item</button>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="flex items-center justify-between px-6 py-4 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-white/5 fixed bottom-0 left-0 right-0 max-w-md mx-auto z-40 pb-6 safe-area-bottom">
+<button class="flex flex-col items-center gap-1 group relative">
+<div class="absolute -top-1 right-2 bg-primary text-background-dark text-[10px] font-bold h-4 min-w-[16px] px-1 rounded-full flex items-center justify-center">1</div>
+<span class="material-symbols-outlined filled text-primary group-hover:scale-110 transition-transform">pending_actions</span>
+<span class="text-[10px] font-medium text-primary">Pending</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 dark:text-white/40 group-hover:text-primary transition-colors">add_shopping_cart</span>
+<span class="text-[10px] font-medium text-slate-400 dark:text-white/40 group-hover:text-primary transition-colors">New Sale</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-400 dark:text-white/40 group-hover:text-primary transition-colors">history</span>
+<span class="text-[10px] font-medium text-slate-400 dark:text-white/40 group-hover:text-primary transition-colors">History</span>
+</button>
+</nav>
+<!-- Gradient overlay for bottom nav fade -->
+<div class="fixed bottom-[85px] left-0 right-0 h-12 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent pointer-events-none max-w-md mx-auto z-30"></div>
+</div>
+</body></html>
