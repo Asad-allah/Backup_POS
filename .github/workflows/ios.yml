@@ -5,11 +5,15 @@ on:
     branches:
       - main
       - master
-  workflow_dispatch: # Allows you to manually click a "Run workflow" button in GitHub
+  workflow_dispatch:
 
 jobs:
   build_ios:
-    runs-on: macos-latest # This boots up a free Apple Mac in the cloud 🍎
+    runs-on: macos-latest
+
+    defaults:
+      run:
+        working-directory: ./backup_pos
 
     steps:
       - name: Checkout code
@@ -25,13 +29,9 @@ jobs:
         run: flutter pub get
 
       - name: Build iOS (No Codesign)
-        # To strictly build a signed .ipa you need an Apple Developer Account 
-        # ($99/yr) and complicated certificate injections.
-        # This builds an unsigned release instead.
         run: flutter build ios --release --no-codesign
 
       - name: Package Payload to Unsigned IPA
-        # This takes the unsigned .app file and packs it into an .ipa file format
         run: |
           mkdir Payload
           cp -r build/ios/iphoneos/Runner.app Payload/
@@ -41,5 +41,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: IOS-Unsigned-Release
-          path: app-release-unsigned.ipa
+          path: backup_pos/app-release-unsigned.ipa
           retention-days: 7
