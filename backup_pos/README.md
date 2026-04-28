@@ -36,12 +36,12 @@
 <div align="center">
   <table border="0">
     <tr>
-      <td><img src="front ui/screen.png" width="350" alt="Home Screen" /></td>
-      <td><img src="front ui/screen (2).png" width="350" alt="Transaction History" /></td>
+      <td><img src="assets/screen1.png" width="350" alt="Home Screen" /></td>
+      <td><img src="assets/screen2.png" width="350" alt="Transaction History" /></td>
     </tr>
     <tr>
-      <td><img src="front ui/screen (3).png" width="350" alt="Debt Management" /></td>
-      <td><img src="front ui/screen (4).png" width="350" alt="Settings & Config" /></td>
+      <td><img src="assets/screen3.png" width="350" alt="Debt Management" /></td>
+      <td><img src="assets/screen4.png" width="350" alt="Settings & Config" /></td>
     </tr>
   </table>
 </div>
