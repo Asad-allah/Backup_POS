@@ -1,57 +1,56 @@
+<div align="center">
+
 # 🛡️ Sheikh Al Jabal — Backup POS System
+
+![Sheikh Al Jabal Banner](assets/pos_banner.png)
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org)
 [![Licence](https://img.shields.io/badge/License-Private-red?style=for-the-badge)](https://github.com/assadAllah630/Backup_POS)
 
-A professional, offline-first Point of Sale (POS) solution designed for high-reliability retail environments. Built to handle the unique challenges of modern commerce in Lebanon, including dual-currency support and intermittent connectivity.
+**A professional, offline-first Point of Sale (POS) solution designed for high-reliability retail environments.**
+
+[Features](#-key-pillars) • [Screenshots](#-screenshots) • [Architecture](#-architecture) • [Getting Started](#-getting-started)
+
+</div>
 
 ---
 
 ## ✨ Key Pillars
 
-### 🚀 Offline-First Reliability
-The core system operates entirely on a local **SQLite** database. Transactions, customer debts, and inventory updates are processed instantly without needing an active internet connection.
+| 🚀 Offline-First | 🔄 Smart Cloud Sync | 💵 Market Optimized |
+|:---:|:---:|:---:|
+| Operates 100% on local **SQLite**. No internet? No problem. | Seamless background sync with **Supabase** when online. | **Dual Currency** (USD/LBP) & WhatsApp integration. |
 
-### 🔄 Smart Cloud Sync
-When online, the app seamlessly synchronizes with **Supabase**. It uses a sophisticated background queue to push local changes and pull cloud updates, ensuring all devices stay in harmony without blocking the user interface.
-
-### 💵 Lebanese Market Optimized
-- **Dual Currency:** Real-time switching and display of both **LBP** and **USD**.
-- **Dynamic Exchange Rates:** Easily adjustable rates via the settings panel.
-- **WhatsApp Integration:** Send receipts and debt statements directly to customers via WhatsApp in Arabic.
-
-### 🔐 Advanced Security
-- **Device Handshake:** Secure registration flow ensuring only authorized hardware can access the system.
-- **Role-Based Access:** PIN-protected screens for Admin and Staff actions.
-- **Audit Logging:** Every critical action is logged for transparency.
-
----
-
-## 🛠️ Features at a Glance
-
-- 📦 **Inventory Management:** CSV import/export, low-stock alerts, and expiry date tracking.
-- 💳 **Debt Tracking:** Comprehensive customer ledger with history and payment processing.
-- 📊 **Analytics:** Visual sales reports and shift summaries using `fl_chart`.
-- 🖨️ **PDF Generation:** Professional receipt printing and PDF exports.
-- 📱 **Mobile & Tablet Optimized:** Responsive UI with smooth micro-animations.
+### 🛠️ Core Capabilities
+*   **Inventory Management:** Smart CSV import/export & real-time stock tracking.
+*   **Debt Tracking:** Complete customer ledgers with history & payment processing.
+*   **Security:** Device-handshake registration & PIN-protected access control.
+*   **Analytics:** Interactive sales reports & shift summaries via `fl_chart`.
 
 ---
 
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="front ui/screen.png" width="400" alt="Home Screen" />
-  <img src="front ui/screen (2).png" width="400" alt="Transaction History" />
-  <br />
-  <img src="front ui/screen (3).png" width="400" alt="Debt Management" />
-  <img src="front ui/screen (4).png" width="400" alt="Settings & Config" />
+  <table border="0">
+    <tr>
+      <td><img src="front ui/screen.png" width="350" alt="Home Screen" /></td>
+      <td><img src="front ui/screen (2).png" width="350" alt="Transaction History" /></td>
+    </tr>
+    <tr>
+      <td><img src="front ui/screen (3).png" width="350" alt="Debt Management" /></td>
+      <td><img src="front ui/screen (4).png" width="350" alt="Settings & Config" /></td>
+    </tr>
+  </table>
 </div>
 
 ---
 
 ## 🏗️ Architecture
+
+The system follows a robust, repository-based architecture to ensure data integrity across local and cloud layers.
 
 ```mermaid
 graph TD
@@ -60,7 +59,19 @@ graph TD
     Repos --> SQLite[(Local SQLite DB)]
     Repos --> Sync[Supabase Sync Service]
     Sync <--> Cloud[(Supabase Cloud)]
+    
+    style SQLite fill:#003B57,color:#fff
+    style Cloud fill:#3ECF8E,color:#fff
+    style UI fill:#02569B,color:#fff
 ```
+
+---
+
+## 🎨 Visual Identity & Aesthetics
+The application is built with a **Premium Dark Theme** optimized for high-contrast retail environments.
+- **Glassmorphism:** Subtle blur effects and frosted-glass cards for a modern feel.
+- **Micro-Animations:** Powered by `flutter_animate` for responsive user feedback.
+- **Typography:** Professional font pairings (Inter & Outfit) via `google_fonts`.
 
 ---
 
@@ -71,24 +82,19 @@ graph TD
 - [Dart SDK](https://dart.dev/get-started)
 
 ### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/assadAllah630/Backup_POS.git
-   ```
-2. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-3. Run the application:
-   ```bash
-   flutter run
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/assadAllah630/Backup_POS.git
+
+# 2. Install dependencies
+flutter pub get
+
+# 3. Run the app
+flutter run
+```
 
 ---
 
-## 🎨 Design Aesthetics
-The application features a premium **Glassmorphism** dark theme, utilizing `flutter_animate` for subtle transitions and `google_fonts` (Inter & Outfit) for a modern, readable typography.
-
----
-
+<div align="center">
 Developed with ❤️ for **Sheikh Al Jabal (شيخ الجبل)**.
+</div>
